@@ -1,0 +1,13 @@
+---
+-  host: all
+   gather_facts: no
+   tasks: 
+    - name: Install apache HTTP Server
+      yum:
+       name: httpd
+       state: latest
+    - name: start the apache HTTP Server
+      service:
+        name: httpd
+        state: started   
+...      
